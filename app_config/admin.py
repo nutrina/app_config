@@ -18,6 +18,6 @@ class ParameterAdmin(admin.ModelAdmin):
 
 @admin.register(ConfigRequest)
 class ConfigRequestAdmin(admin.ModelAdmin):
-    list_display = ('id', 'timestamp', 'name', 'value')
+    list_display = ('id', 'timestamp', 'remote_addr', 'user_agent')
     list_filter = ('timestamp',)
-    search_fields = ('name',)
+    search_fields = ('remote_addr', 'user_agent')
